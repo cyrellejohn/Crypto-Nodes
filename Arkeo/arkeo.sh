@@ -40,7 +40,7 @@ sudo apt-get update && sudo apt-get install docker-ce docker-ce-cli containerd.i
 if [ ! -d "arkeo" ]; then
     git clone https://github.com/arkeonetwork/arkeo
 fi
-cd arkeo && git checkout latest && make proto-gen && make install TAG=testnet
+cd arkeo && git checkout master && make proto-gen && make install TAG=testnet
 arkeod version || { echo "Arkeo installation failed"; exit 1; }
 
 # Initialize Node
