@@ -10,7 +10,7 @@ curl -s localhost:26657/status | jq .result.sync_info.catching_up
   
 ## Create Wallet
 WALLET=cyan  
-arkeod keys add WALLET  
+arkeod keys add $WALLET  
   
 ## Save Wallet and Validator Address
 WALLET_ADDRESS=$(arkeod keys show $WALLET -a)  
