@@ -56,7 +56,7 @@ arkeod init "$ARKEO_NODENAME" --chain-id arkeo
 # Download Genesis and Addrbook
 curl -s $GENESIS_URL | jq '.result.genesis' > $HOME/.arkeo/config/genesis.json
 curl -s $ADDRBOOK_URL > $HOME/.arkeo/config/addrbook.json
-sudo ufw enable && sudo ufw allow 26656
+sudo ufw enable && sudo ufw allow 22 && sudo ufw allow 26656
 
 # Configuration Variables
 CONFIG_TOML=$HOME/.arkeo/config/config.toml
