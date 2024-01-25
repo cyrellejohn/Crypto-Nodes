@@ -51,7 +51,7 @@ arkeod q staking validator $(arkeod keys show $WALLET --bech val -a)
   
 ## Delegate to Own Validator
 arkeod tx staking delegate $VALOPER_ADDRESS 995000000uarkeo \  
---from cyan \  
+--from $WALLET \  
 --gas auto \  
 --fees 200uarkeo  
 -y
