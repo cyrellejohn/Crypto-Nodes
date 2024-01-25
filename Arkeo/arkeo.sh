@@ -10,7 +10,7 @@ SNAPSHOT_URL="https://snapshots-testnet.stake-town.com/arkeo/arkeo_latest.tar.lz
 
 # Update and Install Dependencies
 sudo apt-get update -y && sudo apt-get upgrade -y
-sudo apt-get install -y build-essential curl wget jq make gcc chrony git ccze htop lz4
+sudo apt-get install -y build-essential curl wget jq make gcc chrony git ccze htop lz4 screen
 
 # Increase File Descriptor Limit
 echo 'fs.file-max = 65536' | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
