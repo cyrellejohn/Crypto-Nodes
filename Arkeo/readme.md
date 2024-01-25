@@ -17,7 +17,7 @@ WALLET_ADDRESS=$(arkeod keys show $WALLET -a)
 VALOPER_ADDRESS=$(arkeod keys show $WALLET --bech val -a)  
   
 ## Get Funds
-Join [Discord](https://discord.gg/BfEHpm6uFc) and request tokens in [#faucet](https://discord.com/channels/1050100146626642052/1166849422211162243) with $request WALLET_ADDRESS  
+Join [Discord](https://discord.gg/BfEHpm6uFc) and request tokens in [#faucet](https://discord.com/channels/1050100146626642052/1166849422211162243) with $request $WALLET_ADDRESS  
   
 ## Check Balance to Proceed
 arkeod query bank balances $WALLET_ADDRESS  
