@@ -65,16 +65,6 @@ INDEXER="null"
 FILTER_PEERS="true"
 ENABLE=false
 
-# Optional Timeout Variables
-TIMEOUT_PROPOSE="100ms"
-TIMEOUT_PROPOSE_DELTA="500ms"
-TIMEOUT_PREVOTE="100ms"
-TIMEOUT_PREVOTE_DELTA="500ms"
-TIMEOUT_PRECOMMIT="100ms"
-TIMEOUT_PRECOMMIT_DELTA="500ms"
-TIMEOUT_COMMIT="1s"
-SKIP_TIMEOUT_COMMIT=false
-
 # App Toml Specific Variables
 MINIMUM_GAS_PRICES="0.001uarkeo"
 PRUNING="custom"
@@ -89,18 +79,6 @@ sed -i.bak \
   -e "s/^indexer *=.*/indexer = \"$INDEXER\"/" \
   -e "s/^filter_peers *=.*/filter_peers = \"$FILTER_PEERS\"/" \
   -e "s/^enable *=.*/enable = \"$ENABLE\"/" \
-  "$CONFIG_TOML"
-
-# Set Timeout for Block Process in config.toml [Optional]
-sed -i.bak \
-  -e "s/^timeout_propose *=.*/timeout_propose = \"$TIMEOUT_PROPOSE\"/" \
-  -e "s/^timeout_propose_delta *=.*/timeout_propose_delta = \"$TIMEOUT_PROPOSE_DELTA\"/" \
-  -e "s/^timeout_prevote *=.*/timeout_prevote = \"$TIMEOUT_PREVOTE\"/" \
-  -e "s/^timeout_prevote_delta *=.*/timeout_prevote_delta = \"$TIMEOUT_PREVOTE_DELTA\"/" \
-  -e "s/^timeout_precommit *=.*/timeout_precommit = \"$TIMEOUT_PRECOMMIT\"/" \
-  -e "s/^timeout_precommit_delta *=.*/timeout_precommit_delta = \"$TIMEOUT_PRECOMMIT_DELTA\"/" \
-  -e "s/^timeout_commit *=.*/timeout_commit = \"$TIMEOUT_COMMIT\"/" \
-  -e "s/^skip_timeout_commit *=.*/skip_timeout_commit = $SKIP_TIMEOUT_COMMIT/" \
   "$CONFIG_TOML"
 
 # Set Minimum Gas Price and Pruning in app.toml
